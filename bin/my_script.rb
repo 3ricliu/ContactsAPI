@@ -18,18 +18,18 @@ require 'rest-client'
 #
 # puts RestClient.post(url)
 
-def create_user
-  url = Addressable::URI.new(
-    scheme: 'http',
-    host: 'localhost',
-    port: 3000,
-    path: '/users.json'
-  ).to_s
-  puts RestClient.post(
-  url,
-  { user: { name: "Teddy", email: "cat@gmail.com" } }
-)
-end
+# def create_user
+#   url = Addressable::URI.new(
+#     scheme: 'http',
+#     host: 'localhost',
+#     port: 3000,
+#     path: '/users.json'
+#   ).to_s
+#   puts RestClient.post(
+#   url,
+#   { user: { name: "Teddy", email: "cat@gmail.com" } }
+# )
+# end
 
 # begin
   # create_user
@@ -46,21 +46,22 @@ def update_user
   ).to_s
   puts RestClient.put(
   url,
-  { user: {name: "Ben", email: "cat@gmail.com" } }
+  { user: {username: 'Sarah' } }
 )
 end
 
-def delete_user
-  url = Addressable::URI.new(
-    scheme: 'http',
-    host: 'localhost',
-    port: 3000,
-    path: '/users/2'
-  ).to_s
-  puts RestClient.delete(
-  url
-  # { user: {name: "Ben", email: "cat@gmail.com" } }
-)
-end
-
-delete_user
+update_user
+# def delete_user
+#   url = Addressable::URI.new(
+#     scheme: 'http',
+#     host: 'localhost',
+#     port: 3000,
+#     path: '/users/2'
+#   ).to_s
+#   puts RestClient.delete(
+#   url
+#   # { user: {name: "Ben", email: "cat@gmail.com" } }
+# )
+# end
+#
+# delete_user
