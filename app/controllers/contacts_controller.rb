@@ -1,6 +1,7 @@
 class ContactsController < ApplicationController
   def index
-    render json: Contact.all
+    # TODO
+    render json: Contact.find(params[:user_id])
   end
 
   def create
